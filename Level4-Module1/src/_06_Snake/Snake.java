@@ -47,37 +47,47 @@ public class Snake {
 		
 
 		//4. set canMove to true
-		
+		canMove = true;
 	}
 
 	public void setDirection(Direction d) {
 		//1. set the current direction equal to the passed in Direction only if canMove is true.
 		//   set canMove equal to false.
 		//   make sure the snake cannot completely reverse directions.
-		
+		if(canMove == true;) {
+			currentDirection = d; 
+		}
 	}
 
 	public void reset(Location loc) {
 		//1. clear the snake
-		
+		snake.clear();
 		//2. set the location of the head
-		
+		head.setLocation(loc);
 		//3. add the head to the snake
-		
+		snake.add(head);
 	}
 
 	public boolean isOutOfBounds() {
 		//1. complete the method so it returns true if the head of the snake is outside of the window
 		//   and false otherwise
-		
-		return false;
+		if(getHeadLocation() == isOutOfBounds()) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public boolean isHeadCollidingWithBody() {
 		//1. complete the method so it returns true if the head is located
 		//   in the same location as any other body segment
-		
-		return false;
+		if(getHeadLocation()==isLocationOnSnake(loc)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public boolean isLocationOnSnake(Location loc) {
@@ -93,3 +103,15 @@ public class Snake {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
